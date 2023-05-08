@@ -1,0 +1,44 @@
+name: Docker Image CI # Actions名称
+
+on: # 执行时机
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    # runs-on 指定job任务运行所需要的虚拟机环境(必填字段)
+    runs-on: ubuntu-latest
+    steps:
+      # 拉取代码
+      - name: checkout # 步骤名字
+        # 使用action库  actions/checkout拉取源码
+        uses: actions/checkout@master
+
+      # 安装依赖
+      - name: install
+        run: pnpm install
+
+      # 打包
+      - name: build project
+        run: vuepress build docs
+        
+      # 登录腾讯云镜像容器服务，打包镜像，推送镜像
+      - name: Build the Docker image
+        run: |
+          # 登录腾讯云镜像容器服务
+          docker login --username=${{ secrets.DOCKER_USERNAME }}  ccr.ccs.tencentyun.com --password=${{ secrets.DOCKER_PASSWORD }}
+          # 使用当前目录的 Dockerfile 创建镜像，标签为 knowledge-record:latest
+          docker build -t knowledge-record:latest . 
+          # 打标签
+          docker tag know ccr.ccs.tencentyun.com/yusongh/knowledge-record:latest
+          # 推送到腾讯云镜像容器服务
+          docker push ccr.ccs.tencentyun.com/yusongh/knowledge-record:latest
+      # 登录服务器执行脚本
+      - name: ssh docker login
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USERNAME }}
+          password: ${{ secrets.SSH_PASSWORD }}
+          script: cd /home/yusongh/script && sh knowledge_record_docker_bootstrap.sh ${{ secrets.DOCKER_USERNAME }} ${{ secrets.DOCKER_PASSWORD }}
