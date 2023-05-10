@@ -436,7 +436,7 @@ interface D extends Date {
 
 #### type 与 interface 对比
 
-![type与interface范围对比图](./images/type%E4%B8%8Einterface%E8%8C%83%E5%9B%B4%E5%9B%BE.png)
+![type与interface范围对比图](../.vuepress/public/images/typescript/deep-learing/type%E4%B8%8Einterface%E8%8C%83%E5%9B%B4%E5%9B%BE.png)
 
 ##### 区别1
 
@@ -536,7 +536,7 @@ const person: B = {
 ```
 
 ### 总结
-![js与ts类型](images/js%E4%B8%8Ets%E7%B1%BB%E5%9E%8B.png)
+![js与ts类型](../.vuepress/public/images/typescript/deep-learing/js%E4%B8%8Ets%E7%B1%BB%E5%9E%8B.png)
 
 
 
@@ -581,10 +581,10 @@ const c6: C3 = {
 }
 ```
 
-![联合类型图解](images/%E8%81%94%E5%90%88%E7%B1%BB%E5%9E%8B%E5%9B%BE%E8%A7%A3.png)
+![联合类型图解](../.vuepress/public/images/typescript/deep-learing/%E8%81%94%E5%90%88%E7%B1%BB%E5%9E%8B%E5%9B%BE%E8%A7%A3.png)
 
 #### 遗留问题
-![联合类型遗留问题](images/%E8%81%94%E5%90%88%E7%B1%BB%E5%9E%8B%E9%97%AE%E9%A2%98.png)
+![联合类型遗留问题](../.vuepress/public/images/typescript/deep-learing/%E8%81%94%E5%90%88%E7%B1%BB%E5%9E%8B%E9%97%AE%E9%A2%98.png)
 
 TODO 是否是类型兼容导致的？
 
@@ -943,7 +943,7 @@ type A = number | string
 //   ^-- never A类型为never
 ```
 
-![交叉类型图解](images/%E4%BA%A4%E5%8F%89%E7%B1%BB%E5%9E%8B%E5%9B%BE%E8%A7%A3.png)
+![交叉类型图解](../.vuepress/public/images/typescript/deep-learing/%E4%BA%A4%E5%8F%89%E7%B1%BB%E5%9E%8B%E5%9B%BE%E8%A7%A3.png)
 
 上面的问题，有左手的人，能不能有右手？？
 
@@ -1168,7 +1168,7 @@ runTask(config)
 ### 3、类型兼容的情况
 
 #### （1）简单类型的类型兼容
-![简单类型的类型兼容](./images/%E7%AE%80%E5%8D%95%E7%B1%BB%E5%9E%8B%E7%9A%84%E7%B1%BB%E5%9E%8B%E5%85%BC%E5%AE%B9.png)
+![简单类型的类型兼容](../.vuepress/public/images/typescript/deep-learing/%E7%AE%80%E5%8D%95%E7%B1%BB%E5%9E%8B%E7%9A%84%E7%B1%BB%E5%9E%8B%E5%85%BC%E5%AE%B9.png)
 
 结合上图，以集合的角度来理解。
 - 【大】是包含【小】的关系，即【小】是【大】的子类
@@ -1180,7 +1180,7 @@ runTask(config)
 
 #### （2）普通对象的类型兼容
 
-![普通对象的类型兼容](./images/%E6%99%AE%E9%80%9A%E5%AF%B9%E8%B1%A1%E7%9A%84%E7%B1%BB%E5%9E%8B%E5%85%BC%E5%AE%B9.png)
+![普通对象的类型兼容](../.vuepress/public/images/typescript/deep-learing/%E6%99%AE%E9%80%9A%E5%AF%B9%E8%B1%A1%E7%9A%84%E7%B1%BB%E5%9E%8B%E5%85%BC%E5%AE%B9.png)
 
 属性多，说明限制条件多，则范围更小。
 
@@ -1257,7 +1257,7 @@ f1(user) // 不报错，因为类型兼容。user的类型范围 比 Person的�
 
 ##### 参数个数不同，能兼容吗？
 
-![函数参数数量的类型兼容](./images/%E5%87%BD%E6%95%B0%E5%8F%82%E6%95%B0%E6%95%B0%E9%87%8F%E7%9A%84%E7%B1%BB%E5%9E%8B%E5%85%BC%E5%AE%B9.png)
+![函数参数数量的类型兼容](../.vuepress/public/images/typescript/deep-learing/%E5%87%BD%E6%95%B0%E5%8F%82%E6%95%B0%E6%95%B0%E9%87%8F%E7%9A%84%E7%B1%BB%E5%9E%8B%E5%85%BC%E5%AE%B9.png)
 
 ```ts
 let f1 = (x: number) => {
@@ -1271,7 +1271,7 @@ f1 = f2 // 报错
 f2 = f1 // OK
 ```
 
-![少写参数是很常见的](./images/%E5%B0%91%E5%86%99%E5%8F%82%E6%95%B0%E6%98%AF%E5%BE%88%E5%B8%B8%E8%A7%81%E7%9A%84.png)
+![少写参数是很常见的](../.vuepress/public/images/typescript/deep-learing/%E5%B0%91%E5%86%99%E5%8F%82%E6%95%B0%E6%98%AF%E5%BE%88%E5%B8%B8%E8%A7%81%E7%9A%84.png)
 
 结论：
 **多参数 <= 少参数**
@@ -1280,9 +1280,9 @@ f2 = f1 // OK
 
 TODO 没有完全理解
 
-![函数参数类型的兼容1](./images/%E5%87%BD%E6%95%B0%E5%8F%82%E6%95%B0%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%85%BC%E5%AE%B91.png)
+![函数参数类型的兼容1](../.vuepress/public/images/typescript/deep-learing/%E5%87%BD%E6%95%B0%E5%8F%82%E6%95%B0%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%85%BC%E5%AE%B91.png)
 
-![函数参数类型的兼容2](./images/%E5%87%BD%E6%95%B0%E5%8F%82%E6%95%B0%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%85%BC%E5%AE%B92.png)
+![函数参数类型的兼容2](../.vuepress/public/images/typescript/deep-learing/%E5%87%BD%E6%95%B0%E5%8F%82%E6%95%B0%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%85%BC%E5%AE%B92.png)
 
 结论：
 **对参数要求多 <= 对参数要求少**
@@ -1327,7 +1327,7 @@ listenEvent('click', (e: number) => console.log(e))
 
 ##### 返回值类型不同，能兼容吗？
 
-![函数返回值类型兼容](./images/%E5%87%BD%E6%95%B0%E8%BF%94%E5%9B%9E%E5%80%BC%E7%B1%BB%E5%9E%8B%E5%85%BC%E5%AE%B9.png)
+![函数返回值类型兼容](../.vuepress/public/images/typescript/deep-learing/%E5%87%BD%E6%95%B0%E8%BF%94%E5%9B%9E%E5%80%BC%E7%B1%BB%E5%9E%8B%E5%85%BC%E5%AE%B9.png)
 
 如果两个函数只有返回值不一致，则返回值的兼容性决定函数的兼容性
 
@@ -1403,13 +1403,13 @@ p = p1 // 类型兼容
 
 #### （5）特殊类型的类型兼容
 
-![特殊类型的赋值表](./images/%E7%89%B9%E6%AE%8A%E7%B1%BB%E5%9E%8B%E7%9A%84%E8%B5%8B%E5%80%BC%E8%A1%A8.png)
+![特殊类型的赋值表](../.vuepress/public/images/typescript/deep-learing/%E7%89%B9%E6%AE%8A%E7%B1%BB%E5%9E%8B%E7%9A%84%E8%B5%8B%E5%80%BC%E8%A1%A8.png)
 
 TODO 没有理解透的地方
 为什么 void 不可以赋值给 object
 
 #### （6）顶类型与底类型
-![顶类型与底类型](./images/%E9%A1%B6%E7%B1%BB%E5%9E%8B%E4%B8%8E%E5%BA%95%E7%B1%BB%E5%9E%8B.png)
+![顶类型与底类型](../.vuepress/public/images/typescript/deep-learing/%E9%A1%B6%E7%B1%BB%E5%9E%8B%E4%B8%8E%E5%BA%95%E7%B1%BB%E5%9E%8B.png)
 
 
 
@@ -1418,7 +1418,7 @@ TODO 没有理解透的地方
 ### 深入对象语法
 
 #### 简单对象
-![简单对象](./images/%E6%B7%B1%E5%85%A5%E5%AF%B9%E8%B1%A1%E8%AF%AD%E6%B3%95-%E7%AE%80%E5%8D%95%E5%AF%B9%E8%B1%A1.png)
+![简单对象](../.vuepress/public/images/typescript/deep-learing/%E6%B7%B1%E5%85%A5%E5%AF%B9%E8%B1%A1%E8%AF%AD%E6%B3%95-%E7%AE%80%E5%8D%95%E5%AF%B9%E8%B1%A1.png)
 
 上图表示`Person`类型的集合，是包含第二个写的`Person`类型。即`第二个Person`类型是`第一个Person`的子集。
 
@@ -1530,7 +1530,7 @@ user.scores[0] = 100
 
 #### 回顾
 
-![深入对象语法-回顾](./images/%E6%B7%B1%E5%85%A5%E5%AF%B9%E8%B1%A1%E8%AF%AD%E6%B3%95-%E5%9B%9E%E9%A1%BE.png)
+![深入对象语法-回顾](../.vuepress/public/images/typescript/deep-learing/%E6%B7%B1%E5%85%A5%E5%AF%B9%E8%B1%A1%E8%AF%AD%E6%B3%95-%E5%9B%9E%E9%A1%BE.png)
 
 
 ### 深入函数-函数就像对象一样
@@ -1587,7 +1587,7 @@ f1.count = 1 // 报错 TODO
 ```
 
 ### 深入函数-声明函数及其类型的4中方法
-![深入函数-声明函数的4中方法](./images/%E6%B7%B1%E5%85%A5%E5%87%BD%E6%95%B0-%E5%A3%B0%E6%98%8E%E5%87%BD%E6%95%B0%E7%9A%844%E4%B8%AD%E6%96%B9%E6%B3%95.png)
+![深入函数-声明函数的4中方法](../.vuepress/public/images/typescript/deep-learing/%E6%B7%B1%E5%85%A5%E5%87%BD%E6%95%B0-%E5%A3%B0%E6%98%8E%E5%87%BD%E6%95%B0%E7%9A%844%E4%B8%AD%E6%96%B9%E6%B3%95.png)
 
 #### 1、先写类型再赋值
 
@@ -1609,7 +1609,7 @@ type F5 = typeof f5
 
 ### 两种特殊函数（类型谓词）
 
-![两种特殊函数](./images/%E4%B8%A4%E7%A7%8D%E7%89%B9%E6%AE%8A%E5%87%BD%E6%95%B0.png)
+![两种特殊函数](../.vuepress/public/images/typescript/deep-learing/%E4%B8%A4%E7%A7%8D%E7%89%B9%E6%AE%8A%E5%87%BD%E6%95%B0.png)
 
 #### 1. 构造函数（后面讲）
 
@@ -1768,7 +1768,7 @@ const createAdd2: CreateAdd = a => b => a + b
 
 在java中，函数重载是为了解决，同名函数函数的参数类型、个数不同而创造出来的。
 
-![函数重载](./images/%E5%87%BD%E6%95%B0%E9%87%8D%E8%BD%BD.png)
+![函数重载](../.vuepress/public/images/typescript/deep-learing/%E5%87%BD%E6%95%B0%E9%87%8D%E8%BD%BD.png)
 
 - 同名函数
 - or 参数类型不同
@@ -1845,7 +1845,7 @@ function createDate(a: number | string, b?: number, c?: number): Date {
 
 ### 指定this的类型
 
-![指定this类型](./images/%E6%8C%87%E5%AE%9Athis%E7%B1%BB%E5%9E%8B.png)
+![指定this类型](../.vuepress/public/images/typescript/deep-learing/%E6%8C%87%E5%AE%9Athis%E7%B1%BB%E5%9E%8B.png)
 
 #### 拼凑obj.fn()
 
@@ -1918,7 +1918,7 @@ f1()
 
 ### ...与参数
 
-![剩余参数](./images/%E5%89%A9%E4%BD%99%E5%8F%82%E6%95%B0.png)
+![剩余参数](../.vuepress/public/images/typescript/deep-learing/%E5%89%A9%E4%BD%99%E5%8F%82%E6%95%B0.png)
 
 #### 剩余参数
 
@@ -2008,7 +2008,7 @@ f(...arr2) // 不会报错，因为使用了 as const，arr2的类型为 readonl
 
 ```
 
-![let与const的类型推导](./images/let%E4%B8%8Econst%E7%9A%84%E7%B1%BB%E5%9E%8B%E6%8E%A8%E5%AF%BC.png)
+![let与const的类型推导](../.vuepress/public/images/typescript/deep-learing/let%E4%B8%8Econst%E7%9A%84%E7%B1%BB%E5%9E%8B%E6%8E%A8%E5%AF%BC.png)
 
 
 #### 参数对象析构
@@ -2082,7 +2082,7 @@ function f4(): void {
 
 ### 泛型语法
 
-![泛型语法](./images/%E6%B3%9B%E5%9E%8B%E8%AF%AD%E6%B3%95.png)
+![泛型语法](../.vuepress/public/images/typescript/deep-learing/%E6%B3%9B%E5%9E%8B%E8%AF%AD%E6%B3%95.png)
 
 函数的本质
 
@@ -2104,11 +2104,11 @@ function f4(): void {
 
 而不是笼统的接收类型为联合类型`string | number | boolean`，返回值类型也为联合类型`string | number | boolean`
 
-![为什么会有泛型-1](./images/%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BC%9A%E6%9C%89%E6%B3%9B%E5%9E%8B-1.png)
+![为什么会有泛型-1](../.vuepress/public/images/typescript/deep-learing/%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BC%9A%E6%9C%89%E6%B3%9B%E5%9E%8B-1.png)
 
 下面的方式也无法实现`echo`函数的类型
 
-![为什么会有泛型-2](./images/%E4%B8%BA%E4%BB%80%E4%B9%88%E9%9C%80%E8%A6%81%E6%B3%9B%E5%9E%8B-2.png)
+![为什么会有泛型-2](../.vuepress/public/images/typescript/deep-learing/%E4%B8%BA%E4%BB%80%E4%B9%88%E9%9C%80%E8%A6%81%E6%B3%9B%E5%9E%8B-2.png)
 
 
 因此
@@ -2167,7 +2167,7 @@ type H3 = Hash<Person>
 
 ### 在泛型中使用extends
 
-![extends](./images/extends.png)
+![extends](../.vuepress/public/images/typescript/deep-learing/extends.png)
 
 #### 基本使用
 
@@ -2260,7 +2260,7 @@ function f(a: T): ToArray<T> {
 
 #### 总结（类比数学计算）
 
-![类比数学计算](./images/%E7%B1%BB%E6%AF%94%E6%95%B0%E5%AD%A6%E8%AE%A1%E7%AE%97.png)
+![类比数学计算](../.vuepress/public/images/typescript/deep-learing/%E7%B1%BB%E6%AF%94%E6%95%B0%E5%AD%A6%E8%AE%A1%E7%AE%97.png)
 
 ### 在泛型中使用keyof
 
@@ -2403,7 +2403,7 @@ type X = Mutable<Person>
 
 ### 4、类型体操有多难
 
-![类型体操有多难](./images/%E7%B1%BB%E5%9E%8B%E4%BD%93%E6%93%8D%E6%9C%89%E5%A4%9A%E9%9A%BE.png)
+![类型体操有多难](../.vuepress/public/images/typescript/deep-learing/%E7%B1%BB%E5%9E%8B%E4%BD%93%E6%93%8D%E6%9C%89%E5%A4%9A%E9%9A%BE.png)
 
 类型体操资料
 
@@ -2424,7 +2424,7 @@ type X = Mutable<Person>
 
 ### 5、属性查找规则与隐藏属性
 
-![属性查找规则](./images//%E5%B1%9E%E6%80%A7%E6%9F%A5%E6%89%BE%E8%A7%84%E5%88%99.png)
+![属性查找规则](../.vuepress/public/images/typescript/deep-learing//%E5%B1%9E%E6%80%A7%E6%9F%A5%E6%89%BE%E8%A7%84%E5%88%99.png)
 
 ### 6、原型就是共有属性所在对象
 
@@ -2436,7 +2436,7 @@ type X = Mutable<Person>
 
 ### 9、内容回顾
 
-![JS如何创建对象](./images/JS%E5%A6%82%E4%BD%95%E5%88%9B%E5%BB%BA%E5%AF%B9%E8%B1%A1.png)
+![JS如何创建对象](../.vuepress/public/images/typescript/deep-learing/JS%E5%A6%82%E4%BD%95%E5%88%9B%E5%BB%BA%E5%AF%B9%E8%B1%A1.png)
 
 参考文章
 - [JS 的 new 到底是干什么的？](https://zhuanlan.zhihu.com/p/23987456)
@@ -2477,11 +2477,11 @@ p2.sayHi() // 原型的sayHi p2 19
 
 ### 2、为什么需要class
 
-![为什么需要class](./images/%E4%B8%BA%E4%BB%80%E4%B9%88%E9%9C%80%E8%A6%81class.png)
+![为什么需要class](../.vuepress/public/images/typescript/deep-learing/%E4%B8%BA%E4%BB%80%E4%B9%88%E9%9C%80%E8%A6%81class.png)
 
 ### 3、interface和class的区别
 
-![interface与class区别](./images/interface%E4%B8%8Eclass%E5%8C%BA%E5%88%AB.png)
+![interface与class区别](../.vuepress/public/images/typescript/deep-learing/interface%E4%B8%8Eclass%E5%8C%BA%E5%88%AB.png)
 
 ```ts
 interface PointInterface {
@@ -2707,11 +2707,11 @@ u3.firend // 此时的u3.firend的类型为User | undefined
 
 ### 1、四种成员可见性
 
-![类的成员的可见性](./images/%E7%B1%BB%E7%9A%84%E6%88%90%E5%91%98%E7%9A%84%E5%8F%AF%E8%A7%81%E6%80%A7.png)
+![类的成员的可见性](../.vuepress/public/images/typescript/deep-learing/%E7%B1%BB%E7%9A%84%E6%88%90%E5%91%98%E7%9A%84%E5%8F%AF%E8%A7%81%E6%80%A7.png)
 
 ### 2、static属性与static block
 
-![class中的static](./images/class%E4%B8%AD%E7%9A%84static.png)
+![class中的static](../.vuepress/public/images/typescript/deep-learing/class%E4%B8%AD%E7%9A%84static.png)
 
 static block 用于初始化私有属性
 
@@ -3075,17 +3075,17 @@ const a = <string>a // 该语法是断言呢？还是<string>a</string>?
 
 ```
 
-![tsx中的标签与断言之间的冲突](./images/tsx%E4%B8%AD%E7%9A%84%E6%A0%87%E7%AD%BE%E4%B8%8E%E6%96%AD%E8%A8%80%E4%B9%8B%E9%97%B4%E7%9A%84%E5%86%B2%E7%AA%81.png)
+![tsx中的标签与断言之间的冲突](../.vuepress/public/images/typescript/deep-learing/tsx%E4%B8%AD%E7%9A%84%E6%A0%87%E7%AD%BE%E4%B8%8E%E6%96%AD%E8%A8%80%E4%B9%8B%E9%97%B4%E7%9A%84%E5%86%B2%E7%AA%81.png)
 
 ### 2、JSX的本质
 
-![jsx/tsx的本质](./images/jsx%E4%B8%8Etsx%E7%9A%84%E6%9C%AC%E8%B4%A8.png)
+![jsx/tsx的本质](../.vuepress/public/images/typescript/deep-learing/jsx%E4%B8%8Etsx%E7%9A%84%E6%9C%AC%E8%B4%A8.png)
 
-![jsx/tsx的本质-类型](./images/jsx%E4%B8%8Etsx%E7%9A%84%E6%9C%AC%E8%B4%A8-%E7%B1%BB%E5%9E%8B.png)
+![jsx/tsx的本质-类型](../.vuepress/public/images/typescript/deep-learing/jsx%E4%B8%8Etsx%E7%9A%84%E6%9C%AC%E8%B4%A8-%E7%B1%BB%E5%9E%8B.png)
 
 ### 3、JSX.Element是什么
 
-![tsx的类型声明](./images/tsx%E7%9A%84%E7%B1%BB%E5%9E%8B%E5%A3%B0%E6%98%8E.png)
+![tsx的类型声明](../.vuepress/public/images/typescript/deep-learing/tsx%E7%9A%84%E7%B1%BB%E5%9E%8B%E5%A3%B0%E6%98%8E.png)
 
 其中的对应关系是react定死的，为什么`Element接口`跟`jsx的变量`绑定，为什么`IntrinsicElement接口`是定义标签及其属性的？其实都是react定死的
 
@@ -3671,11 +3671,11 @@ export {}
 
 ```
 
-![d.ts文件的妙用](./images/d.ts%E6%96%87%E4%BB%B6%E7%9A%84%E5%A6%99%E7%94%A8.png)
+![d.ts文件的妙用](../.vuepress/public/images/typescript/deep-learing/d.ts%E6%96%87%E4%BB%B6%E7%9A%84%E5%A6%99%E7%94%A8.png)
 
 ### 2、d.ts 与 JS 文件配合使用
 
-![js与d.ts配合使用](./images/js%E4%B8%8Ed.ts%E9%85%8D%E5%90%88%E4%BD%BF%E7%94%A8.png)
+![js与d.ts配合使用](../.vuepress/public/images/typescript/deep-learing/js%E4%B8%8Ed.ts%E9%85%8D%E5%90%88%E4%BD%BF%E7%94%A8.png)
 
 #### 案例一
 
@@ -3692,7 +3692,7 @@ var addOne: (a: number) => number
 
 其实是在 `x.d.ts` 文件中声明类型与变量，这样在其他 `ts` 文件中才能使用
 
-![js与d.ts配合使用-使用var](./images/js%E4%B8%8Ed.ts%E9%85%8D%E5%90%88%E4%BD%BF%E7%94%A8-%E4%BD%BF%E7%94%A8var.png)
+![js与d.ts配合使用-使用var](../.vuepress/public/images/typescript/deep-learing/js%E4%B8%8Ed.ts%E9%85%8D%E5%90%88%E4%BD%BF%E7%94%A8-%E4%BD%BF%E7%94%A8var.png)
 
 #### 案例二
 
@@ -3700,11 +3700,11 @@ var addOne: (a: number) => number
 
 则可以给 `js` 文件添加 `同名` 的 `x.d.ts` 文件，ts会自动识别同名文件并完成声明关联
 
-![js与d.ts配合使用-同名文件声明关联](./images/js%E4%B8%8Ed.ts%E9%85%8D%E5%90%88%E4%BD%BF%E7%94%A8-%E5%90%8C%E5%90%8D%E6%96%87%E4%BB%B6%E5%A3%B0%E6%98%8E%E5%85%B3%E8%81%94.png)
+![js与d.ts配合使用-同名文件声明关联](../.vuepress/public/images/typescript/deep-learing/js%E4%B8%8Ed.ts%E9%85%8D%E5%90%88%E4%BD%BF%E7%94%A8-%E5%90%8C%E5%90%8D%E6%96%87%E4%BB%B6%E5%A3%B0%E6%98%8E%E5%85%B3%E8%81%94.png)
 
 #### 总结
 
-![js与d.ts配合使用-总结](./images/js%E4%B8%8Ed.ts%E9%85%8D%E5%90%88%E4%BD%BF%E7%94%A8-%E6%80%BB%E7%BB%93.png)
+![js与d.ts配合使用-总结](../.vuepress/public/images/typescript/deep-learing/js%E4%B8%8Ed.ts%E9%85%8D%E5%90%88%E4%BD%BF%E7%94%A8-%E6%80%BB%E7%BB%93.png)
 
 ### 3、浏览器的类型声明来自哪里
 
@@ -3740,9 +3740,9 @@ var addOne: (a: number) => number
 
 由于 react 是使用 `flow` 来做类型的，因此都是 `js` 代码，只能给 `react` 添加 `d.ts` 文件来补充类型声明
 
-![react类型声明](./images/react%E7%B1%BB%E5%9E%8B%E5%A3%B0%E6%98%8E.png)
+![react类型声明](../.vuepress/public/images/typescript/deep-learing/react%E7%B1%BB%E5%9E%8B%E5%A3%B0%E6%98%8E.png)
 
-![react类型声明2](./images/react%E7%B1%BB%E5%9E%8B%E5%A3%B0%E6%98%8E2.png)
+![react类型声明2](../.vuepress/public/images/typescript/deep-learing/react%E7%B1%BB%E5%9E%8B%E5%A3%B0%E6%98%8E2.png)
 
 ### 5、Vue3的类型声明来自哪里
 
@@ -3750,21 +3750,21 @@ var addOne: (a: number) => number
 
 可查看 `vuee3` 中的 `package.json` 中的 `types` 字段
 
-![vue3类型声明](./images/vue3%E7%B1%BB%E5%9E%8B%E5%A3%B0%E6%98%8E.png)
+![vue3类型声明](../.vuepress/public/images/typescript/deep-learing/vue3%E7%B1%BB%E5%9E%8B%E5%A3%B0%E6%98%8E.png)
 
-![d.ts文件来历](./images/d.ts%E6%96%87%E4%BB%B6%E6%9D%A5%E5%8E%86.png)
+![d.ts文件来历](../.vuepress/public/images/typescript/deep-learing/d.ts%E6%96%87%E4%BB%B6%E6%9D%A5%E5%8E%86.png)
 
 ### 6、Node.js的类型声明来自哪里
 
-![node类型声明1](./images/node%E7%B1%BB%E5%9E%8B%E5%A3%B0%E6%98%8E1.png)
+![node类型声明1](../.vuepress/public/images/typescript/deep-learing/node%E7%B1%BB%E5%9E%8B%E5%A3%B0%E6%98%8E1.png)
 
-![node类型声明2](./images/node%E7%B1%BB%E5%9E%8B%E5%A3%B0%E6%98%8E2.png)
+![node类型声明2](../.vuepress/public/images/typescript/deep-learing/node%E7%B1%BB%E5%9E%8B%E5%A3%B0%E6%98%8E2.png)
 
-![node类型声明3](./images/node%E7%B1%BB%E5%9E%8B%E5%A3%B0%E6%98%8E3.png)
+![node类型声明3](../.vuepress/public/images/typescript/deep-learing/node%E7%B1%BB%E5%9E%8B%E5%A3%B0%E6%98%8E3.png)
 
 ### 7、四种给JS添加类型声明的方式
 
-![js项目中使用ts总结](./images/js%E9%A1%B9%E7%9B%AE%E4%B8%AD%E4%BD%BF%E7%94%A8ts%E6%80%BB%E7%BB%93.png)
+![js项目中使用ts总结](../.vuepress/public/images/typescript/deep-learing/js%E9%A1%B9%E7%9B%AE%E4%B8%AD%E4%BD%BF%E7%94%A8ts%E6%80%BB%E7%BB%93.png)
 
 如果库没有提供类型声明文件，但是自己去维护一个库的类型声明又不太现实。
 
