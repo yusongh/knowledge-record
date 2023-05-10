@@ -9,5 +9,16 @@ export const navbar: NavbarConfig = [
       { text: '较深入学习-2022-03-06', link: '/typescript/deeper-learning.md' },
       { text: '深入学习-2022-09-14', link: '/typescript/deep-learning.md' },
     ] 
+  },
+  {
+    text: '工程化',
+    children: [
+      {
+        text: '组件库',
+        children: [
+          { text: 'vue3-ts-vite-组件库搭建', link: '/engineering/component-library/component-library-build-vue3-ts-vite.md' }
+        ]
+      }
+    ]
   }
 ]

@@ -7,5 +7,13 @@ export const sidebar: SidebarConfig = {
     '/typescript/problem-record.md',
     '/typescript/deeper-learning',
     '/typescript/deep-learning',
+  ],
+  '/engineering': [
+    {
+      text: '组件库',
+      children: [
+        '/engineering/component-library/component-library-build-vue3-ts-vite.md'
+      ]
+    }
   ]
 }
