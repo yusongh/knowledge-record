@@ -18,7 +18,13 @@ export const navbar: NavbarConfig = [
         children: [
           { text: 'vue3-ts-vite-组件库搭建', link: '/engineering/component-library/component-library-build-vue3-ts-vite.md' }
         ]
-      }
+      },
+      {
+        text: '部署',
+        children: [
+          { text: '前端docker部署', link: '/engineering/deploy/frontend-docker-deploy.md' }
+        ]
+      },
     ]
   }
 ]

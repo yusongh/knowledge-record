@@ -8,11 +8,19 @@ export const sidebar: SidebarConfig = {
     '/typescript/deeper-learning',
     '/typescript/deep-learning',
   ],
-  '/engineering': [
+  '/engineering/component-library': [
     {
       text: '组件库',
       children: [
         '/engineering/component-library/component-library-build-vue3-ts-vite.md'
+      ]
+    },
+  ],
+  '/engineering/deploy': [
+    {
+      text: '部署',
+      children: [
+        '/engineering/deploy/frontend-docker-deploy.md'
       ]
     }
   ]
