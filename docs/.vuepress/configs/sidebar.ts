@@ -23,5 +23,13 @@ export const sidebar: SidebarConfig = {
         '/engineering/deploy/frontend-docker-deploy.md'
       ]
     }
+  ],
+  '/engineering/packaging-tools': [
+    {
+      text: 'webpack',
+      children: [
+        '/engineering/packaging-tools/webpack.md'
+      ]
+    }
   ]
 }

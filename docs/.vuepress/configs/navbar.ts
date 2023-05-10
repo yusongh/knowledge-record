@@ -14,6 +14,12 @@ export const navbar: NavbarConfig = [
     text: '工程化',
     children: [
       {
+        text: '打包工具',
+        children: [
+          '/engineering/packaging-tools/webpack.md'
+        ]
+      },
+      {
         text: '组件库',
         children: [
           { text: 'vue3-ts-vite-组件库搭建', link: '/engineering/component-library/component-library-build-vue3-ts-vite.md' }
