@@ -27,5 +27,11 @@ export const sidebar: SidebarConfig = {
   '/engineering/packaging-tools': [
     '/engineering/packaging-tools/webpack.md',
     '/engineering/packaging-tools/browserslist.md',
-  ]
+  ],
+  '/problems/work': [
+    '/problems/work/problems-work.md',
+  ],
+  '/problems/study': [
+    '/problems/study/element-ui.md',
+  ],
 }

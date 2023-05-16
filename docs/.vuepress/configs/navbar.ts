@@ -11,6 +11,23 @@ export const navbar: NavbarConfig = [
     ] 
   },
   {
+    text: '遇到的问题',
+    children: [
+      {
+        text: '工作',
+        children: [
+          '/problems/work/problems-work.md'
+        ]
+      },
+      {
+        text: '学习',
+        children: [
+          '/problems/study/element-ui.md'
+        ]
+      },
+    ]
+  },
+  {
     text: '工程化',
     children: [
       {
