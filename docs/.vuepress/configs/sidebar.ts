@@ -5,6 +5,7 @@ export const sidebar: SidebarConfig = {
   '/javascript': [
     '/javascript/regular-expression.md',
     '/javascript/closure.md',
+    '/javascript/js-execution-context-stack-scope.md',
   ],
   '/typescript': [
     '/typescript/getting-started-notes.md',

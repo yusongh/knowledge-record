@@ -6,6 +6,7 @@ export const navbar: NavbarConfig = [
     children: [
       '/javascript/regular-expression.md',
       '/javascript/closure.md',
+      '/javascript/js-execution-context-stack-scope.md',
     ]
   },
   { 
