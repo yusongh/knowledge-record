@@ -1,6 +1,12 @@
 import { NavbarConfig } from 'vuepress'
 
 export const navbar: NavbarConfig = [
+  {
+    text: 'Javascript',
+    children: [
+      '/javascript/regular-expression.md',
+    ]
+  },
   { 
     text: 'Typescript',
     children: [
@@ -51,6 +57,12 @@ export const navbar: NavbarConfig = [
           { text: '前端docker部署', link: '/engineering/deploy/frontend-docker-deploy.md' }
         ]
       },
+    ]
+  },
+  {
+    text: 'html&css',
+    children: [
+      '/html-css/css.md',
     ]
   },
   {

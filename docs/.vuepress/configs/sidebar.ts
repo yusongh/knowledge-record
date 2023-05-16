@@ -2,6 +2,9 @@ import type { SidebarConfig } from 'vuepress'
 
 export const sidebar: SidebarConfig = {
   // 不同子路径下的页面会使用不同的侧边栏
+  '/javascript': [
+    '/javascript/regular-expression.md',
+  ],
   '/typescript': [
     '/typescript/getting-started-notes.md',
     '/typescript/problem-record.md',
@@ -35,6 +38,9 @@ export const sidebar: SidebarConfig = {
     '/problems/study/element-ui.md',
     '/problems/study/other.md',
     '/problems/study/problem-thinking-record.md',
+  ],
+  '/html-css': [
+    '/html-css/css.md',
   ],
   '/rear-end/data-base': [
     '/rear-end/data-base/mongodb.md',
