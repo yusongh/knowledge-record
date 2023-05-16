@@ -24,6 +24,7 @@ export const navbar: NavbarConfig = [
         children: [
           '/problems/study/element-ui.md',
           '/problems/study/other.md',
+          '/problems/study/problem-thinking-record.md',
         ]
       },
     ]

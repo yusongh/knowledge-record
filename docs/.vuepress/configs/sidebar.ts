@@ -34,6 +34,7 @@ export const sidebar: SidebarConfig = {
   '/problems/study': [
     '/problems/study/element-ui.md',
     '/problems/study/other.md',
+    '/problems/study/problem-thinking-record.md',
   ],
   '/rear-end/data-base': [
     '/rear-end/data-base/mongodb.md',
