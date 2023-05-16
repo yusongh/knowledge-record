@@ -22,7 +22,8 @@ export const navbar: NavbarConfig = [
       {
         text: '学习',
         children: [
-          '/problems/study/element-ui.md'
+          '/problems/study/element-ui.md',
+          '/problems/study/other.md',
         ]
       },
     ]
@@ -49,6 +50,17 @@ export const navbar: NavbarConfig = [
           { text: '前端docker部署', link: '/engineering/deploy/frontend-docker-deploy.md' }
         ]
       },
+    ]
+  },
+  {
+    text: '后端',
+    children: [
+      {
+        text: '数据库',
+        children: [
+          '/rear-end/data-base/mongodb.md',
+        ]
+      }
     ]
   }
 ]
