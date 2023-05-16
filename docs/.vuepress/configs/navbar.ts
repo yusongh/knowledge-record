@@ -16,7 +16,8 @@ export const navbar: NavbarConfig = [
       {
         text: '打包工具',
         children: [
-          '/engineering/packaging-tools/webpack.md'
+          '/engineering/packaging-tools/webpack.md',
+          '/engineering/packaging-tools/browserslist.md',
         ]
       },
       {

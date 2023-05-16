@@ -25,11 +25,7 @@ export const sidebar: SidebarConfig = {
     }
   ],
   '/engineering/packaging-tools': [
-    {
-      text: 'webpack',
-      children: [
-        '/engineering/packaging-tools/webpack.md'
-      ]
-    }
+    '/engineering/packaging-tools/webpack.md',
+    '/engineering/packaging-tools/browserslist.md',
   ]
 }
