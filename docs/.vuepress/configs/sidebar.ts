@@ -4,6 +4,7 @@ export const sidebar: SidebarConfig = {
   // 不同子路径下的页面会使用不同的侧边栏
   '/javascript': [
     '/javascript/regular-expression.md',
+    '/javascript/closure.md',
   ],
   '/typescript': [
     '/typescript/getting-started-notes.md',

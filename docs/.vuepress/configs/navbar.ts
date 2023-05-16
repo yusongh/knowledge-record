@@ -5,6 +5,7 @@ export const navbar: NavbarConfig = [
     text: 'Javascript',
     children: [
       '/javascript/regular-expression.md',
+      '/javascript/closure.md',
     ]
   },
   { 
