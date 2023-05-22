@@ -30,6 +30,7 @@ export const navbar: NavbarConfig = [
       {
         text: '学习',
         children: [
+          '/problems/study/typescript.md',
           '/problems/study/element-ui.md',
           '/problems/study/other.md',
           '/problems/study/problem-thinking-record.md',

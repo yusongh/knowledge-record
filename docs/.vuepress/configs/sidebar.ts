@@ -40,6 +40,7 @@ export const sidebar: SidebarConfig = {
     '/problems/study/element-ui.md',
     '/problems/study/other.md',
     '/problems/study/problem-thinking-record.md',
+    '/problems/study/typescript.md',
   ],
   '/html-css': [
     '/html-css/css.md',
