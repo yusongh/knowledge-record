@@ -48,7 +48,7 @@
 
 否则会出现下列的报错
 
-![没有安装vue-loader@15的报错](../../../.vuepress/public/images/front-end-frame/vue/vue2/update-2.7/%E6%B2%A1%E6%9C%89%E5%AE%89%E8%A3%85vue-loader%4015%E7%9A%84%E6%8A%A5%E9%94%99.png)
+![没有安装vue-loader@15的报错](../../../.vuepress/public/images/front-end-frame/vue/vue2/update-2.7/%E6%B2%A1%E6%9C%89%E5%AE%89%E8%A3%85vue-loader15%E7%89%88%E6%9C%AC%E7%9A%84%E6%8A%A5%E9%94%99.png)
 
 #### 5. 升级
 
