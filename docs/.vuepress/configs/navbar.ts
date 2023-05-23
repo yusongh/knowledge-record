@@ -19,6 +19,24 @@ export const navbar: NavbarConfig = [
     ] 
   },
   {
+    text: '前端框架',
+    children: [
+      {
+        text: 'vue',
+        children: [
+        '/front-end-frame/vue/vue2/vue2.md',
+        '/front-end-frame/vue/vue3/vue3.md',
+        ]
+      },
+      {
+        text: 'react',
+        children: [
+          '/front-end-frame/react/react.md',
+        ]
+      }
+    ]
+  },
+  {
     text: '遇到的问题',
     children: [
       {
@@ -30,6 +48,7 @@ export const navbar: NavbarConfig = [
       {
         text: '学习',
         children: [
+          '/problems/study/typescript.md',
           '/problems/study/element-ui.md',
           '/problems/study/other.md',
           '/problems/study/problem-thinking-record.md',
