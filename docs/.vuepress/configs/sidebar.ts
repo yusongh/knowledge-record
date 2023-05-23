@@ -13,6 +13,15 @@ export const sidebar: SidebarConfig = {
     '/typescript/deeper-learning',
     '/typescript/deep-learning',
   ],
+  '/front-end-frame/vue/vue2': [
+    '/front-end-frame/vue/vue2/vue2.md',
+  ],
+  '/front-end-frame/vue/vue3': [
+    '/front-end-frame/vue/vue3/vue3.md',
+  ],
+  '/front-end-frame/react': [
+    '/front-end-frame/react/react.md',
+  ],
   '/engineering/component-library': [
     {
       text: '组件库',
