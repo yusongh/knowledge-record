@@ -1,7 +1,5 @@
 # 闭包
 
-
-
 ## 闭包的定义
 
 当函数可以 `记住` 并 `访问` 所在的词法作用域时，就产生了闭包，即使函数是在当前词法作用域之外执行
@@ -45,39 +43,13 @@ leakObject.leakMethod()
 
 ## 使用浏览器工具查看内存使用情况
 
-![浏览器工具查看内存情况](../.vuepress/public/images/javascript/closure/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%B7%A5%E5%85%B7%E6%9F%A5%E7%9C%8B%E5%86%85%E5%AD%98%E6%83%85%E5%86%B5.png)
+![浏览器工具Memory查看内存情况](../.vuepress/public/images/javascript/closure/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%B7%A5%E5%85%B7%E6%9F%A5%E7%9C%8B%E5%86%85%E5%AD%98%E6%83%85%E5%86%B5.png)
+
+![通过浏览器的performance工具查看内存使用情况](../.vuepress/public/images/javascript/closure/%E9%80%9A%E8%BF%87%E6%B5%8F%E8%A7%88%E5%99%A8%E7%9A%84performance%E5%B7%A5%E5%85%B7%E6%9F%A5%E7%9C%8B%E5%86%85%E5%AD%98%E4%BD%BF%E7%94%A8%E6%83%85%E5%86%B5.png)
 
 ### 闭包与内存泄漏的关系
 
 **这个是假设 `可以访问` 即产生闭包的情况下**
-
-> 但是产生了闭包，不一定会产生内存泄漏
-
-#### 只有满足 `记住` ，并 `访问着` 即会产生内存泄漏
-
-```javascript
-let leakObject = null
-setInterval(function test() {
-  const originLeakObject = leakObject
-  const unused = function() {
-    if (originLeakObject) {
-      console.log(originLeakObject)
-    }
-  }
-
-  leakObject = {
-    leakStr: new Array(1e7).join("*"),
-    leakMethod() {
-      debugger
-    }
-  }
-}, 10);
-
-```
-
-通过浏览器工具查看内存情况，随着时间的推移，内存使用一直加大
-
-![同时满足记住并访问着产生内存泄漏](../.vuepress/public/images/javascript/closure/%E5%90%8C%E6%97%B6%E6%BB%A1%E8%B6%B3%E8%AE%B0%E4%BD%8F%E5%B9%B6%E8%AE%BF%E9%97%AE%E7%9D%80%E4%BA%A7%E7%94%9F%E5%86%85%E5%AD%98%E6%B3%84%E6%BC%8F.png)
 
 #### 只有 `记住`，没有 `访问着`
 
@@ -108,7 +80,7 @@ leakObject.leakMethod()
 
 在 debugger 处可以看到访问 `originLeakObject` 出现报错，说明 `originLeakObject` 在函数执行完即被销毁了
 
-侧面说明只有 `记住` 没有 `访问着`，不会产生内存泄漏
+侧面说明只有 `记住` 没有 `访问着`，不会产生闭包，不会产生内存泄漏
 
 也可通过下列例子，然后通过浏览器工具查看内存使用情况
 
@@ -156,12 +128,83 @@ setInterval(function test() {
 
 ```
 
-通过浏览器工具查看内存情况，随着时间的推移，内存使用基本无太大变化
+通过浏览器工具查看内存情况，随着时间的推移，内存使用基本无太大变化。即没有产生内存泄漏，也没有产生闭包
 
 ![只有访问着没有记住](../.vuepress/public/images/javascript/closure/%E5%8F%AA%E6%9C%89%E8%AE%BF%E9%97%AE%E7%9D%80%E6%B2%A1%E6%9C%89%E8%AE%B0%E4%BD%8F.png)
 
 ![只有访问着没有记住内存使用情况](../.vuepress/public/images/javascript/closure/%E5%8F%AA%E6%9C%89%E8%AE%BF%E9%97%AE%E7%9D%80%E6%B2%A1%E6%9C%89%E8%AE%B0%E4%BD%8F%E5%86%85%E5%AD%98%E4%BD%BF%E7%94%A8%E6%83%85%E5%86%B5.png)
 
+
+#### 只有满足 `记住` ，并 `访问着`，并且 `引用关系得不到释放` 即会产生内存泄漏
+
+下列例子中
+
+第一次执行的 `test()` 即test1() 产生的 `leakObject.leadMethod` 对 `test1()` 产生的作用域有引用，该作用域中 `unused()` 在词法解释时发现对 `originLeakObject` 有引用，此时 `originLeakObject` 为 `null`。
+
+第二次执行的 `test()` 即test2() 产生的 `leakObject.leadMethod` 对 `test2()` 产生的作用域有引用，该作用域中 `unused()` 在词法解释时发现对 `originLeakObject` 有引用，此时 `originLeakObject` 为 `test1()` 中产生的 `leakObject`。 
+
+引用关系为：`全局的leakObject` -> `test2() 作用域` -> `test2() 的 originLeakObject` -> `test1() 产生的 leakObject` -> `test1() 作用域` -> `test1() 的 originLeakObject` -> `null`
+
+```javascript
+let leakObject = null
+setInterval(function test() {
+  const originLeakObject = leakObject
+  const unused = function() {
+    if (originLeakObject) {
+      console.log(originLeakObject)
+    }
+  }
+
+  leakObject = {
+    leakStr: new Array(1e7).join("*"),
+    leakMethod() {
+      debugger
+    }
+  }
+}, 10);
+
+```
+
+通过浏览器工具查看内存情况，随着时间的推移，内存使用一直加大
+
+![同时满足记住并访问着产生内存泄漏](../.vuepress/public/images/javascript/closure/%E5%90%8C%E6%97%B6%E6%BB%A1%E8%B6%B3%E8%AE%B0%E4%BD%8F%E5%B9%B6%E8%AE%BF%E9%97%AE%E7%9D%80%E4%BA%A7%E7%94%9F%E5%86%85%E5%AD%98%E6%B3%84%E6%BC%8F.png)
+
+### 结论
+
+1. 只有满足 `记住`，并且 `访问着` 才会产生闭包。
+
+2. 产生了闭包，不一定会产生内存泄漏。** 引用关系被正确释放则不会产生内存泄露 **
+
+```javascript
+let leakObject = null
+
+test() {
+  const originLeakObject = leakObject
+  const unused = function() {
+    if (originLeakObject) {
+      console.log(originLeakObject)
+    }
+  }
+
+  leakObject = {
+    leakStr: new Array(1000000),
+    leakMethod() {
+      debugger
+    }
+  }
+}
+
+let index = 0
+
+while(index < 100) {
+  test()
+  index++
+}
+
+// 加上该句代码即可释放引用关系
+leakObject = null
+
+```
 
 ## 疑问
 
