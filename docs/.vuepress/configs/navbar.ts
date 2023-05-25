@@ -59,6 +59,7 @@ export const navbar: NavbarConfig = [
   {
     text: '工程化',
     children: [
+      '/engineering/specifications/front-end-specifications.md',
       {
         text: '打包工具',
         children: [

@@ -22,6 +22,9 @@ export const sidebar: SidebarConfig = {
   '/front-end-frame/react': [
     '/front-end-frame/react/react.md',
   ],
+  '/engineering/specifications': [
+    '/engineering/specifications/front-end-specifications.md',
+  ],
   '/engineering/component-library': [
     {
       text: '组件库',
