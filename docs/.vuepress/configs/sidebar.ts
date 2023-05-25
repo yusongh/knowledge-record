@@ -54,6 +54,12 @@ export const sidebar: SidebarConfig = {
   '/html-css': [
     '/html-css/css.md',
   ],
+  '/interview-questions': [
+    '/interview-questions/js',
+      '/interview-questions/css',
+      '/interview-questions/vue2',
+      '/interview-questions/vue3',
+  ],
   '/rear-end/data-base': [
     '/rear-end/data-base/mongodb.md',
   ],

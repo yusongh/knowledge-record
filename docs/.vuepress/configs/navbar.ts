@@ -87,6 +87,15 @@ export const navbar: NavbarConfig = [
     ]
   },
   {
+    text: '面试题',
+    children: [
+      '/interview-questions/js',
+      '/interview-questions/css',
+      '/interview-questions/vue2',
+      '/interview-questions/vue3',
+    ]
+  },
+  {
     text: '后端',
     children: [
       {
