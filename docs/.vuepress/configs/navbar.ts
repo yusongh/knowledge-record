@@ -7,6 +7,7 @@ export const navbar: NavbarConfig = [
       '/javascript/regular-expression.md',
       '/javascript/closure.md',
       '/javascript/js-execution-context-stack-scope.md',
+      '/javascript/html5-drag.md',
     ]
   },
   { 
