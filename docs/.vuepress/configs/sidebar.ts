@@ -6,6 +6,7 @@ export const sidebar: SidebarConfig = {
     '/javascript/regular-expression.md',
     '/javascript/closure.md',
     '/javascript/js-execution-context-stack-scope.md',
+    '/javascript/html5-drag.md',
   ],
   '/typescript': [
     '/typescript/getting-started-notes.md',
@@ -21,6 +22,9 @@ export const sidebar: SidebarConfig = {
   ],
   '/front-end-frame/react': [
     '/front-end-frame/react/react.md',
+  ],
+  '/engineering/specifications': [
+    '/engineering/specifications/front-end-specifications.md',
   ],
   '/engineering/component-library': [
     {
@@ -53,6 +57,12 @@ export const sidebar: SidebarConfig = {
   ],
   '/html-css': [
     '/html-css/css.md',
+  ],
+  '/interview-questions': [
+    '/interview-questions/js',
+      '/interview-questions/css',
+      '/interview-questions/vue2',
+      '/interview-questions/vue3',
   ],
   '/rear-end/data-base': [
     '/rear-end/data-base/mongodb.md',

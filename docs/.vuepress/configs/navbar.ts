@@ -7,6 +7,7 @@ export const navbar: NavbarConfig = [
       '/javascript/regular-expression.md',
       '/javascript/closure.md',
       '/javascript/js-execution-context-stack-scope.md',
+      '/javascript/html5-drag.md',
     ]
   },
   { 
@@ -59,6 +60,7 @@ export const navbar: NavbarConfig = [
   {
     text: '工程化',
     children: [
+      '/engineering/specifications/front-end-specifications.md',
       {
         text: '打包工具',
         children: [
@@ -84,6 +86,15 @@ export const navbar: NavbarConfig = [
     text: 'html&css',
     children: [
       '/html-css/css.md',
+    ]
+  },
+  {
+    text: '面试题',
+    children: [
+      '/interview-questions/js',
+      '/interview-questions/css',
+      '/interview-questions/vue2',
+      '/interview-questions/vue3',
     ]
   },
   {
