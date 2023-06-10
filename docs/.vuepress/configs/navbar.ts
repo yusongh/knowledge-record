@@ -8,6 +8,8 @@ export const navbar: NavbarConfig = [
       '/javascript/closure.md',
       '/javascript/js-execution-context-stack-scope.md',
       '/javascript/html5-drag.md',
+      '/javascript/principles-of-browser-composition.md',
+      '/javascript/webworker.md',
     ]
   },
   { 
