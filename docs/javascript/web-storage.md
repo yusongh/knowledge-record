@@ -619,7 +619,7 @@ request.onsuccess = (e) => {
 
 比如要查找`xza`，先看第一位，因为 `x 比 a 大`，因此走右边。然后看第二位，因为 `z 比 y 大`，因此还是走右边，最后找到id为6，通过id即可查到对应的值
 
-![B+树索引原理](../.vuepress/public/images/javascript/web-storage/B%2B%E6%A0%91%E7%B4%A2%E5%BC%95%E5%8E%9F%E7%90%86.png)
+![B+树索引原理](../.vuepress/public/images/javascript/web-storage/%E7%B4%A2%E5%BC%95%E5%8E%9F%E7%90%86.png)
 
 > 树的层级越少，查找的路径越短，查找的速度越快
 
