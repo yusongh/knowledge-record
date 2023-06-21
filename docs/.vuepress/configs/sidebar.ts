@@ -9,6 +9,7 @@ export const sidebar: SidebarConfig = {
     '/javascript/html5-drag.md',
     '/javascript/principles-of-browser-composition.md',
     '/javascript/webworker.md',
+    '/javascript/web-storage.md',
   ],
   '/typescript': [
     '/typescript/getting-started-notes.md',
@@ -23,7 +24,7 @@ export const sidebar: SidebarConfig = {
     '/front-end-frame/vue/vue3/vue3.md',
   ],
   '/front-end-frame/react': [
-    '/front-end-frame/react/react.md',
+    '/front-end-frame/react/entering-react.md',
   ],
   '/engineering/specifications': [
     '/engineering/specifications/front-end-specifications.md',

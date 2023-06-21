@@ -10,6 +10,7 @@ export const navbar: NavbarConfig = [
       '/javascript/html5-drag.md',
       '/javascript/principles-of-browser-composition.md',
       '/javascript/webworker.md',
+      '/javascript/web-storage.md',
     ]
   },
   { 
@@ -34,7 +35,7 @@ export const navbar: NavbarConfig = [
       {
         text: 'react',
         children: [
-          '/front-end-frame/react/react.md',
+          '/front-end-frame/react/entering-react.md',
         ]
       }
     ]
