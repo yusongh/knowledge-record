@@ -1,6 +1,6 @@
 # vue2
 
-## vue-cli4.x+vue2.6升级vue2.7 实录
+## 1. vue-cli4.x+vue2.6升级vue2.7 实录
 
 ### 动机
 
