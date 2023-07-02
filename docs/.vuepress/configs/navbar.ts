@@ -26,16 +26,22 @@ export const navbar: NavbarConfig = [
     text: '前端框架',
     children: [
       {
-        text: 'vue',
+        text: 'vue2',
         children: [
-        '/front-end-frame/vue/vue2/vue2.md',
-        '/front-end-frame/vue/vue3/vue3.md',
+          '/front-end-frame/vue/vue2/vue2.md',
+        ]
+      },
+      {
+        text: 'vue3',
+        children: [
+          '/front-end-frame/vue/vue3/vue3.md',
         ]
       },
       {
         text: 'react',
         children: [
           '/front-end-frame/react/entering-react.md',
+          '/front-end-frame/react/react-idea.md',
         ]
       }
     ]
