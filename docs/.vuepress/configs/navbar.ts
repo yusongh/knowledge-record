@@ -42,6 +42,7 @@ export const navbar: NavbarConfig = [
         children: [
           '/front-end-frame/react/entering-react.md',
           '/front-end-frame/react/react-idea.md',
+          '/front-end-frame/react/fiber-architecture.md',
         ]
       }
     ]
