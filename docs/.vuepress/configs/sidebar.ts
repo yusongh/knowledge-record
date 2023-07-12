@@ -26,6 +26,7 @@ export const sidebar: SidebarConfig = {
   '/front-end-frame/react': [
     '/front-end-frame/react/entering-react.md',
     '/front-end-frame/react/react-idea.md',
+    '/front-end-frame/react/fiber-architecture.md',
   ],
   '/engineering/specifications': [
     '/engineering/specifications/front-end-specifications.md',
